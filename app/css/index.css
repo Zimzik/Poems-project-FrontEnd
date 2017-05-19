@@ -3,12 +3,36 @@ body {
 }
 
 header {
+  position: relative;
   height: 895px;
   background: url(/img/main.png) no-repeat;
   background-color: #fff;
   background-position: center center;
   /*  background-attachment: fixed;*/
   background-size: cover;
+}
+
+header:before {
+  display: block;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+header:after {
+  display: block;
+  position: absolute;
+  content: "";
+  z-index: 10;
+  bottom: -10px;
+  height: 151px;
+  width: 100%;
+  background: url(/img/trap.png) no-repeat;
+  background-color: transparent;
 }
 
 .logo {
@@ -45,8 +69,8 @@ header {
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  -webkit-transition: 0.3s text-shadow;
-  transition: 0.3s text-shadow;
+  -webkit-transition: 0.1s text-shadow;
+  transition: 0.1s text-shadow;
 }
 
 .main-navigation ul li a:hover {
@@ -143,6 +167,7 @@ header {
 
   .description {
     margin-top: 65px;
+    padding: 0 20px 0 20px;
   }
 
   .description h2 {
